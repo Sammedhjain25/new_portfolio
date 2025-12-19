@@ -19,6 +19,9 @@ export default defineConfig({
   server: {
     port: 7777,
   },
+  ssr: {
+    noExternal: ['react-dom'],
+  },
   plugins: [
     mdx({
       rehypePlugins: [[rehypeImgSize, { dir: 'public' }], rehypeSlug, rehypePrism],
@@ -27,6 +30,12 @@ export default defineConfig({
     }),
     remixCloudflareDevProxy(),
     remix({
+      serverModuleFormat: 'esm',
+      future: {
+        v3_fetcherPersist: true,
+        v3_relativeSplatPath: true,
+        v3_throwAbortReason: true,
+      },
       routes(defineRoutes) {
         return defineRoutes(route => {
           route('/', 'routes/home/route.js', { index: true });

@@ -23,6 +23,7 @@
     "@react-three/fiber": "^9.4.0",
     "@remix-run/cloudflare": "^2.7.1",
     "@remix-run/cloudflare-pages": "^2.7.1",
+    "@remix-run/node": "^2.7.1",
     "@remix-run/react": "^2.7.1",
     "@splinetool/react-spline": "^4.1.0",
     "@splinetool/runtime": "^1.10.85",
