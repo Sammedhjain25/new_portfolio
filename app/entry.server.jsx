@@ -6,7 +6,7 @@
 
 import { PassThrough } from 'node:stream';
 
-import { createReadableStreamFromReadable } from '@remix-run/node';
+import { createReadableStreamFromReadable } from '@vercel/remix';
 import { RemixServer } from '@remix-run/react';
 import { isbot } from 'isbot';
 import ReactDOMServer from 'react-dom/server';
